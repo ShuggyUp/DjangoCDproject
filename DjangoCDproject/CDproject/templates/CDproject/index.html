@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link type="text/css" href="{% static 'CDproject/css/styles.css' %}" rel="stylesheet" />
+    <title>Страница собачек и кошечек</title>
+</head>
+<body>
+
+<section>
+<p><img class="img" src="{% static url %}"></p>
+<form class="form" method="post">
+    {% csrf_token %}
+    <button class="button" type="submit" name="cat">Хочу котика</button>
+    <button class="button" type="submit" name="dog">Хочу собачку</button>
+</form>
+</section>
+
+</body>
+</html>
